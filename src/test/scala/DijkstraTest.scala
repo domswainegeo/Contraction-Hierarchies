@@ -2,9 +2,6 @@ import org.scalatest.funsuite.AnyFunSuite
 
 class DijkstraTest extends AnyFunSuite {
 
-  class SimpleNode(val id: Int) extends Node {}
-  class SimpleEdge(val a: Node, val b: Node, val weight: Double) extends Edge {}
-
   val node1 = new SimpleNode(1)
   val node2 = new SimpleNode(2)
   val node3 = new SimpleNode(3)

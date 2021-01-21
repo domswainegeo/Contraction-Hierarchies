@@ -16,4 +16,10 @@ class Graph(val nodes: List[Node], val edges: List[Edge]){
     outgoing.get
   }
 
+  def remove_node(node_to_remove: Node): Graph = {
+    val new_nodes: List[Node] = nodes.filter(node => !node.equals(node_to_remove))
+    val new_edges: List[Edge] = edges.filter(edge => !edge.a.equals(node_to_remove) && !edge.b.equals(node_to_remove))
+    new Graph(new_nodes, new_edges)
+  }
+
 }

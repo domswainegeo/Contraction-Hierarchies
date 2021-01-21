@@ -1,0 +1,1 @@
+class SimpleNode(val id: Int) extends Node {}
