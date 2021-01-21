@@ -7,10 +7,11 @@ object Dijkstra {
     val queue: mutable.PriorityQueue[Node] = new mutable.PriorityQueue[Node]()(Ordering[Double].on(dist).reverse)
     val expanded: mutable.HashSet[Node] = new mutable.HashSet[Node]()
 
+    dist(b) = Double.PositiveInfinity
     dist(a) = 0
     queue.addOne(a)
 
-    while(!expanded.contains(b)){
+    while(!expanded.contains(b) && queue.nonEmpty){
       val node: Node = queue.dequeue()
       expanded.add(node)
       graph.get_outgoing().getOrElse(node, new Array[Edge](0)).foreach(edge => {

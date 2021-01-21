@@ -10,6 +10,7 @@ class DijkstraTest extends AnyFunSuite {
   val node3 = new SimpleNode(3)
   val node4 = new SimpleNode(4)
   val node5 = new SimpleNode(5)
+  val node6 = new SimpleNode(6)
 
   val graph = new Graph(
     List(node1, node2, node3, node4, node5),
@@ -29,6 +30,7 @@ class DijkstraTest extends AnyFunSuite {
     assert(Dijkstra.distance(graph, node1, node5) == 5)
     assert(Dijkstra.distance(graph, node1, node2) == 5)
     assert(Dijkstra.distance(graph, node1, node4) == 5)
+    assert(Dijkstra.distance(graph, node1, node6) == Double.PositiveInfinity)
   }
 
 }
