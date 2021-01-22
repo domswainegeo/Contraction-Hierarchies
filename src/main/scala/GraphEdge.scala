@@ -1,0 +1,1 @@
+class GraphEdge(val a: GraphNode, val b: GraphNode, val weight: Double) extends Edge {}

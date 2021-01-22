@@ -1,1 +1,0 @@
-class SimpleEdge(val a: Node, val b: Node, val weight: Double) extends Edge {}

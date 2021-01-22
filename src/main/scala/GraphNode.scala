@@ -1,0 +1,1 @@
+class GraphNode(val id: Int) extends Node {}
